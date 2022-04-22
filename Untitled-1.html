@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: pretendard;
+            font-weight: 500;
+        }
+        fieldset {
+            width: 200px;
+            padding: 10px 50px 15px 10px;
+            margin: 10px 0 0 0;
+            border: 1.5px solid gray;
+            border-radius: 5px;
+        }
+
+        .box {
+            display: none;
+        }
+
+        .heightInput {
+            width: 50px;
+            height: 10px;
+            margin: 10px 0;
+        }
+
+        .predict {
+            margin: 10px 0 0 0;
+        }
+
+        p {
+            margin: 10px 0;
+        }
+
+        #resultBox {
+            font-weight: 600;
+        }
+
+        #result {
+            font-size: 50px;
+            margin: 0 0 0 5px;
+            font-weight: 700;
+        }
+
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="/jquery.js"></script> <!-- 인터넷 연결 실패를 대비한 로컬 파일-->
+    <script src="./calculate.js"></script>
+</head>
+<body>
+    <p>Your gender is:</p>
+    <input type="radio" name="gen" value="male">
+    <label for="male">M</label>
+    <input type="radio" name="gen" value="female">
+    <label for="male">F</label>
+    <br/>
+
+    <label for="myHeight">Current Height: </label>
+    <input type="number" id="myHeight" class="heightInput"><span> cm</span>
+    <br/>
+
+    <label for="parentsHeight">Parent's Heights: </label><br/>
+    <input type="number" id="fatherHeight" class="heightInput"><span> cm(F) </span>
+    <input type="number" id="motherHeight" class="heightInput"><span> cm(M)</span>
+    <p>Puberty existance</p>
+    <input type="radio" name="isPuberty" value="true">
+    <label for="true">Yes</label>
+    <input type="radio" name="isPuberty" value="false">
+    <label for="true">No</label>
+    <fieldset>
+        <legend>Then, Check here</legend>
+    <button class="btn" onclick="pubertySymptoms()">Check here</button>
+    <div class="box">
+        <input type="checkbox" id="b0"><label for="b0" id="c0">1</label></input>
+        <input type="checkbox" id="b1"><label for="b1" id="c1">2</label></input>
+        <input type="checkbox" id="b2"><label for="b2" id="c2">3</label></input>
+    </div>
+    </fieldset>
+    <button onclick="predictHeight()" class="predict">Return</button>
+    <h4 id="resultBox">Result <span id="result">0</span> cm</h4>
+</body>
+</html>
