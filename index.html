@@ -51,6 +51,7 @@
     <script src="/jquery.js"></script> <!-- Local File -->
     <script src="./calculate.js"></script>
 </head>
+
 <body>
     <p>Your gender is:</p>
     <input type="radio" name="gen" value="male">
@@ -66,20 +67,30 @@
     <label for="parentsHeight">Parent's Heights: </label><br/>
     <input type="number" id="fatherHeight" class="heightInput"><span> cm(F) </span>
     <input type="number" id="motherHeight" class="heightInput"><span> cm(M)</span>
+    
     <p>Puberty existance</p>
     <input type="radio" name="isPuberty" value="true">
     <label for="true">Yes</label>
     <input type="radio" name="isPuberty" value="false">
     <label for="true">No</label>
+    
     <fieldset>
         <legend>Then, Check here</legend>
-    <button id="btn" onclick="pubertySymptoms()">Check here</button>
-    <div class="box">
-        <input type="checkbox" id="b0"><label for="b0" id="c0">1</label></input>
-        <input type="checkbox" id="b1"><label for="b1" id="c1">2</label></input>
-        <input type="checkbox" id="b2"><label for="b2" id="c2">3</label></input>
-    </div>
+        <button id="btn">Check here</button>
+        <div class="box">
+            <input type="checkbox" name="symptoms" id="b0" value=1>  <label for="b0" id="c0"></label></input>
+            <input type="checkbox" name="symptoms" id="b1" value=2>  <label for="b1" id="c1"></label></input>
+            <input type="checkbox" name="symptoms" id="b2" value=4>  <label for="b2" id="c2"></label></input>
+            <input type="checkbox" name="symptoms" id="b3" value=8>  <label for="b3" id="c3"></label></input>
+            <input type="checkbox" name="symptoms" id="b4" value=16> <label for="b4" id="c4"></label></input>
+            <input type="checkbox" name="symptoms" id="b5" value=32> <label for="b5" id="c5"></label></input>
+            <input type="checkbox" name="symptoms" id="b6" value=64> <label for="b6" id="c6"></label></input>
+            <input type="checkbox" name="symptoms" id="b7" value=128><label for="b7" id="c7"></label></input>
+            <input type="checkbox" name="symptoms" id="b8" value=256><label for="b8" id="c8"></label></input>
+        </div>
     </fieldset>
+    
+    
     <button onclick="predictHeight()" class="predict">Return</button>
     <h4 id="resultBox">Result <span id="result">0</span> cm</h4>
 </body>
