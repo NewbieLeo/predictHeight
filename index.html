@@ -87,11 +87,13 @@
             <input type="checkbox" name="symptoms" id="b6" value=64> <label for="b6" id="c6"></label></input>
             <input type="checkbox" name="symptoms" id="b7" value=128><label for="b7" id="c7"></label></input>
             <input type="checkbox" name="symptoms" id="b8" value=256><label for="b8" id="c8"></label></input>
+            <input type="checkbox" name="symptoms" id="b9" value=512><label for="b9" id="c9"></label></input>
         </div>
     </fieldset>
     
     
-    <button onclick="predictHeight()" class="predict">Return</button>
-    <h4 id="resultBox">Result <span id="result">0</span> cm</h4>
+    <button id="predictBtn" style="margin:10px 0 0 0">Return</button>
+    <!-- Ah Screw, I know inline style is unrecommended -->
+    <h4 id="resultBox">Result: <span id="result">0</span> cm</h4>
 </body>
-</html>
+</html>`
