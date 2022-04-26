@@ -37,7 +37,7 @@ $(document).ready(function () {
     });
 
     $("#predictBtn").click(function() {
-        // 디버깅 예정
+        // Glory to jQuery :)
         isPuberty = $("input[name='isPuberty']:checked").val();
         if (!isPuberty) {
             alert("Input your gender");
